@@ -1,13 +1,14 @@
 # Exercise 1 - Write a Python class for an Animal that has a name and energy attributes. The animal class should also have methods for eat, sleep, and play that will take in an integer and increase/decrease the energy of the animal with a formatted print statement
 
 
-class Animal():
+class Animals():
     def __init__(self, name, energy=100):
         self.name = name
         self.energy = energy
     def eat(self, food):
         self.energy = self.energy + (food * 10)
-        print(f'{self.name} has ate {food} cans of food. His energy is now {self.energy}')
+        # self.energy += food
+        print(f'{self.name} has ate {food} blocks of food. His energy is now {self.energy}')
     def sleep(self, sleep):
         self.energy = self.energy + sleep
         print(f"{self.name} has slept for {sleep} minutes. His energy is now {self.energy}")
@@ -41,8 +42,9 @@ class Cart:
 
     #Create a function for adding items, removing items, and showing the cart
     def add(self, food):
+        food = input("What would you like to add to your cart today?")
         self.shopping_cart.append(food)
-        print(f'{food.name} has been added to your cart.')
+        print(f'{food.name.title()} has been added to your cart.')
 
 
     def remove(self, food):
@@ -53,17 +55,17 @@ class Cart:
         print(f'Your Shopping Cart: \n{self.shopping_cart}')
 
 
-class food:
+class dfood:
     def __init__(self, name, quantity):
         self.name = name
         self.quantity = quantity
 
 
 
-food1 = food("Apples", "8")
-food2 = food("Oranges", 3)
-food3 = food("Coconuts", 3)
-food4 = food("Papaya", 4)
+food1 = dfood("Apples", 8)
+food2 = dfood("Oranges", 3)
+food3 = dfood("Coconuts", 3)
+food4 = dfood("Papaya", 4)
 
 Cart.add(food1)
 Cart.show()
