@@ -39,9 +39,9 @@ class Cart:
         self.shopping_list = []
     
     #create method for adding
-    def add(self, item):
+    def add(self, food):
         #add item to list
-        lst = self.shopping_list.append(item)
+        lst = self.shopping_list.append(food)
         return lst
     
     # create method for removing
@@ -56,24 +56,20 @@ class Cart:
         print(self.shopping_list)
         
 
-class food:
-    def __init__(self, item, quantity):
-        self.item = item 
-        self.quantity = quantity    
 
 
 
-food1 = food("Apples", 8)
-food2 = food("Oranges", 3)
-food3 = food("Coconuts", 3)
-food4 = food("Papaya", 4)
+cart = Cart()
+food1 = "Apples"
+cart.add(food1)
 
-
-Cart.add(food1)
-Cart.show()
-Cart.add(food2)
-Cart.add(food3)
-Cart.add(food4)
-Cart.show()
-Cart.remove(food3)
-Cart.show()
+food2 = "Oranges"
+food3 = "Coconuts"
+food4 = "Papaya"
+cart.show()
+cart.add(food2)
+cart.add(food3)
+cart.add(food4)
+cart.show()
+cart.remove(food3)
+cart.show()
